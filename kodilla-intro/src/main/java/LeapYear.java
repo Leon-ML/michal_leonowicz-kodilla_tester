@@ -1,27 +1,23 @@
 public class LeapYear {
     public static void main(String[] args) {
-
         int year = 2020;
-        boolean leap = false;
-
-        if(year % 4 == 0)
-        {
-            if( year % 100 == 0)
-            {
-                if ( year % 400 == 0)
-                    leap = true;
-                else
-                    leap = false;
-            }
-            else
-                leap = true;
-        }
-        else
-            leap = false;
-
-        if(leap)
+        if (isLeapYear(year)) {
             System.out.println(year + " to rok przestępny. ");
-        else
+        } else {
             System.out.println(year + " to rok nieprzestępny. ");
+        }
+    }
+
+    public static boolean isLeapYear(int year) {
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0){
+                    return true;
+                } else
+                    return false;
+            } else
+                return true;
+        } else
+            return false;
     }
 }
