@@ -1,12 +1,31 @@
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.Random;
+
 public class RandomNumbers {
-    public int getCountOfRandomNumber(int max) {
-    Random random = new Random();
-    int result = 0;
-    int sum = 0;
-    while (sum < max) {
-        int temp = random.nextInt(30);
-        sum = sum + temp;
-        result++;
+    int Max = 0;
+    int Min = 30;
+
+    public RandomNumbers(){
+        int sum = 0;
+        while(sum < 5000) {
+            Random randomNumber = new Random();
+            int result = randomNumber.nextInt(31);
+            sum = sum + result;
+
+            if (result<Min){
+                Min = result;
+            }
+            if (result>Max){
+                Max = result;
+            }
+
+        }
+        System.out.println("Najmniejsza wylosowana wartość to" + " " +Min );
+        System.out.println("Najwieksza wylosowana wartość to" + " " +Max );
     }
-    return result;
+
+    public static void main(String[] args) {
+        new RandomNumbers();
+    }
 }
