@@ -1,32 +1,32 @@
 public class Colours {
     public enum Kolory {
-        Z, /* Zielony */
-        B, /* Biały */
-        C, /* Czerwony */
-        N, /* Niebieski */
-        P, /* Pomarańczowy */
-        R, /* Różowy */
+        Zielony, /* Zielony */
+        Bialy, /* Biały */
+        Czerwony, /* Czerwony */
+        Niebieski, /* Niebieski */
+        Pomaranczowy, /* Pomarańczowy */
+        Rozowy, /* Różowy */
     }
     public static Kolory letterChosen() {
         String letter = UserDialogs.getLetter();
         switch (letter) {
             case "Z":
-                return Kolory.Z;
+                return Kolory.Zielony;
             case "B":
-                return Kolory.B;
-                break; // unreachable statement
+                return Kolory.Bialy;
+                 // unreachable statement
             case "C":
-                return Kolory.C;
-                break;
+                return Kolory.Czerwony;
+
             case "N":
-                return Kolory.N;
-                break;
+                return Kolory.Niebieski;
+
             case "P":
-                return Kolory.P;
-                break;
+                return Kolory.Pomaranczowy;
+
             case "R":
-                return Kolory.R;
-                break;
+                return Kolory.Rozowy;
+
             default:
                 System.out.println("Nie mam tej litery w bazie danych. Spróbuj wpisać inną.");
         }
