@@ -2,27 +2,37 @@ package com.kodilla.bank.homework;
 
 public class Bank {
 
-    private CashMachine deposit;
-    private CashMachine withdrawal;
-    private int number;
+    private CashMachine[] machines;
+    private int size;
 
-    public Transaction(int value) {
-        if (value > 0)
+    public Bank() {
+        this.size = 0;
+        this.machines = new CashMachine[0];
     }
 
-    public Account(int number) {
-        this.number = number;
-        this.deposit = new CashMachine();
-        this.withdrawal = new CashMachine();
+    public void addMachine(CashMachine machine) {
+        this.size++;
+        CashMachine[] newTab = new CashMachine[this.size];
+        System.arraycopy(machines, 0, newTab, 0, machines.length);
+        newTab[this.size - 1] = machine;
+        this.machines = newTab;
     }
 
-    public void makeATransaction(int value) {
-        if (value > 0) {
-            this.deposit.add(value);
-        } else if (value < 0) {
-            this.withdrawal.add(value);
-        } else {
-            return;
+    public double getSaldo() {
+        double Saldo = 0;
+        for (CashMachine machine : machines) {
+            Saldo += machine.getSaldo();
         }
+        return Saldo;
+    }
+
+    public double getAverageDeposits(){
+        int sumDeposits = 0;
+        double sumCounts = 0;
+        for (CashMachine AverageSum:machines){
+            sumDeposits += AverageSum.getDeposits();
+            sumCounts += AverageSum.getDepositsCount();
+        }
+        return sumDeposits/sumCounts;
     }
 }
