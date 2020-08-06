@@ -57,6 +57,15 @@ public class CashMachine {
         }
         return count;
     }
+    public double getWithdrawals() {
+        double Saldo0 = 0;
+        for (int Withdrawal : values) {
+            if (Withdrawal < 0) {
+                Saldo0 += Withdrawal;
+            }
+        }
+        return Saldo0;
+    }
     public double getWithdrawalCount() {
         double count = 0;
         for (int Withdrawal : values) {
