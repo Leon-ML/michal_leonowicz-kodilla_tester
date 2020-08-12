@@ -35,4 +35,29 @@ public class Bank {
         }
         return sumDeposits/sumCounts;
     }
+
+    public double getAverageWithdrawals(){
+        int sumWithdrawals = 0;
+        double sumCounts = 0;
+        for (CashMachine AverageSum:machines){
+            sumWithdrawals += AverageSum.getWithdrawals();
+            sumCounts += AverageSum.getWithdrawalCount();
+        }
+        return sumWithdrawals/sumCounts;
+    }
+
+    public int getDepositsCount(){
+        int depositsCount = 0;
+        for (CashMachine depoCount:machines){
+            depositsCount += depoCount.getDepositsCount();
+        }
+        return depositsCount;
+    }
+    public int getWithdrawalsCount(){
+        int withdrawalsCount = 0;
+        for (CashMachine withdCount:machines){
+            withdrawalsCount += withdCount.getWithdrawalCount();
+        }
+        return withdrawalsCount;
+    }
 }
