@@ -2,26 +2,36 @@ package com.kodilla.collections.interfaces.homework;
 
 public class Peugeot implements Car {
 
-    private double speed;
+    private int speed;
 
-    public Peugeot (double speed){
+    public Peugeot (int speed){
         this.speed = speed;
     }
 
     @Override
-    public double getSpeed() {
+    public int getSpeed() {
         return speed;
     }
 
-    @Override // program zaproponował mi zamianę voidów na double, wiec metoda nie jest taka jaka powinna być
-    public double increaseSpeed() {
-        return speed + 30;
+    @Override
+    public String getBrand() {
+        return "Peugeot";
+    }
+
+    @Override
+    public int getFinalSpeed() {
+        return 110;
+    }
+
+    @Override
+    public void increaseSpeed() {
+        System.out.println("Peugeot przyspieszył o 30km/h");
 
     }
 
     @Override
-    public double decreaseSpeed() {
-        return speed - 20;
+    public void decreaseSpeed() {
+        System.out.println("Peugeot zwolnił o 20km/h");
 
     }
 }

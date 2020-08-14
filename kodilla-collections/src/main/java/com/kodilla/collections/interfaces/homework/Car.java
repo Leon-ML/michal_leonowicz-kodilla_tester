@@ -2,9 +2,13 @@ package com.kodilla.collections.interfaces.homework;
 
 public interface Car {
 
-    double getSpeed();
+    int getSpeed();
 
-    double increaseSpeed(); // IntelliJ zaproponował mi zamianę voidów na double, wiec moje metody są nietrafione
+    String getBrand();
 
-    double decreaseSpeed(); // jak wyżej
+    int getFinalSpeed();
+
+    void increaseSpeed();
+
+    void decreaseSpeed();
 }
