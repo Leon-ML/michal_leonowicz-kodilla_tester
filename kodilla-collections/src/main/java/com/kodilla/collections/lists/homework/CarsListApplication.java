@@ -1,5 +1,6 @@
 package com.kodilla.collections.lists.homework;
 
+import com.kodilla.collections.arrays.homework.CarUtils;
 import com.kodilla.collections.interfaces.homework.Car;
 import com.kodilla.collections.interfaces.homework.Citroen;
 import com.kodilla.collections.interfaces.homework.Peugeot;
@@ -17,8 +18,8 @@ public class CarsListApplication {
         cars.add(new Renault(100));
 
         for (Car car : cars)
-            System.out.println(car + ", description: ");
- // tu jest problem z importem i implementacją metody describeCar
+            CarUtils.describeCar(car);
+
 
         cars.remove(0);
         Peugeot peugeot = new Peugeot(70);
@@ -26,7 +27,7 @@ public class CarsListApplication {
         cars.size();
 
         for (Car car : cars)
-                System.out.println(car + ", description: ");
+            System.out.println(car);
 
     }
 }
