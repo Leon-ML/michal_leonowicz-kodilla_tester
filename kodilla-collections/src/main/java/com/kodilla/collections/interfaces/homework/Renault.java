@@ -36,5 +36,12 @@ public class Renault implements Car {
         System.out.println("Renault zwolnił o 10km/h.");
 
     }
+
+    @Override
+    public String toString() {
+        return "Renault{" +
+                "speed=" + speed +
+                '}';
+    }
 }
 

@@ -36,4 +36,10 @@ public class Citroen implements Car {
         System.out.println("Citroen zwolnił o 20km/h");
     }
 
+    @Override
+    public String toString() {
+        return "Citroen{" +
+                "speed=" + speed +
+                '}';
+    }
 }
