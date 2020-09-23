@@ -18,7 +18,5 @@ public class BookApplication {
         for (Book book : books)
             System.out.println(book);
 
-
-
     }
 }
