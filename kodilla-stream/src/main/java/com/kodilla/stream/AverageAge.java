@@ -7,7 +7,7 @@ public class AverageAge {
                 .map(u->u.getAge())
                 .mapToInt(n->n)
                 .average()
-                .getAsDouble()
+                .getAsDouble();
         System.out.println(avg);
     }
 }
